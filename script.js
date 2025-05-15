@@ -1,9 +1,26 @@
 // Preloader
 window.addEventListener('load', () => {
   const preloader = document.querySelector('.preloader');
+  const captions = ['Crafting Your Vibe...', 'Unleashing Creativity...', 'Your Style Awaits...'];
+  const captionEl = document.querySelector('.preloader-caption');
+  let index = 0;
+
+  const changeCaption = () => {
+    captionEl.style.opacity = 0;
+    setTimeout(() => {
+      captionEl.textContent = captions[index];
+      captionEl.style.opacity = 1;
+      index = (index + 1) % captions.length;
+    }, 500);
+  };
+
+  changeCaption();
+  const captionInterval = setInterval(changeCaption, 3000);
+
   setTimeout(() => {
+    clearInterval(captionInterval);
     preloader.classList.add('hidden');
-  }, 1000);
+  }, 3000);
 });
 
 // Hamburger Menu
