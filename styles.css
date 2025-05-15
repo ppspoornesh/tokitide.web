@@ -102,35 +102,39 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem 1rem;
 }
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+  background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(0,0,0,0.4));
 }
 .hero-content {
   color: #fff;
   text-align: center;
+  max-width: 90%;
+  margin: auto;
 }
 .brand-name {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 700;
+  line-height: 1.2;
 }
 .tagline {
-  font-size: 1.8rem;
-  margin: 1.5rem 0;
+  font-size: 1.6rem;
+  margin: 1rem 0;
 }
 .sub-tagline {
-  font-size: 1.3rem;
-  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 .btn {
-  padding: 1rem 2.5rem;
+  padding: 0.8rem 2rem;
   border-radius: 50px;
   background: linear-gradient(135deg, #000, #333);
   color: #fff;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1rem;
   display: inline-block;
   transition: background 0.3s ease;
 }
@@ -163,7 +167,7 @@ a {
 
 /* Sections */
 .section {
-  padding: 5rem 2rem;
+  padding: 4rem 1.5rem;
   max-width: 1400px;
   margin: auto;
   text-align: center;
@@ -175,7 +179,7 @@ a {
   margin: 0 auto 2rem;
 }
 .section-title {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
@@ -186,7 +190,7 @@ a {
 
 /* Info Section */
 .info-text {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   max-width: 800px;
   margin: auto;
 }
@@ -194,37 +198,38 @@ a {
 /* How It Works Section */
 .steps-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
   margin-top: 2rem;
 }
 .step-card {
   background: #fff;
   border-radius: 10px;
-  padding: 2rem;
+  padding: 1.5rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 .step-icon {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 .step-title {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
 }
 .step-desc {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #555;
 }
 
 /* Slider Sections */
 .slider-section {
-  padding: 5rem 2rem;
+  padding: 4rem 1.5rem;
 }
 .swiper-container {
   max-width: 1200px;
   margin: auto;
   padding: 2rem 0;
+  position: relative;
 }
 .swiper-slide {
   display: flex;
@@ -232,15 +237,15 @@ a {
 }
 .model-card,
 .review-card {
-  width: 300px;
+  width: 280px;
   background: #fff;
-  border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
   overflow: hidden;
 }
 .model-img {
   width: 100%;
-  height: 400px;
+  height: 360px;
   object-fit: cover;
 }
 .model-info {
@@ -275,10 +280,31 @@ a {
   background: #333;
   opacity: 1;
 }
+.swiper-button-prev,
+.swiper-button-next {
+  color: #333;
+  width: 40px;
+  height: 40px;
+  background: rgba(255,255,255,0.8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 20px;
+}
+.swiper-button-prev {
+  left: 10px;
+}
+.swiper-button-next {
+  right: 10px;
+}
 
 /* Order Section */
 .order-text {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   max-width: 800px;
   margin: 0 auto 2rem;
 }
@@ -376,16 +402,26 @@ a {
 /* Responsive */
 @media (max-width: 1024px) {
   .brand-name {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
   .tagline {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+  }
+  .sub-tagline {
+    font-size: 1rem;
   }
   .section-title {
     font-size: 2rem;
   }
   .section {
-    padding: 4rem 1.5rem;
+    padding: 3rem 1.5rem;
+  }
+  .model-card,
+  .review-card {
+    width: 260px;
+  }
+  .model-img {
+    height: 340px;
   }
 }
 @media (max-width: 768px) {
@@ -406,21 +442,70 @@ a {
   .hamburger {
     display: flex;
   }
+  .hero {
+    min-height: 80vh;
+    padding: 1.5rem 1rem;
+  }
   .brand-name {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
   .tagline {
     font-size: 1.2rem;
+    margin: 0.8rem 0;
+  }
+  .sub-tagline {
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+  }
+  .btn {
+    padding: 0.7rem 1.8rem;
+    font-size: 0.9rem;
   }
   .model-card,
   .review-card {
-    width: 260px;
-    margin: 0 auto;
+    width: 240px;
   }
   .model-img {
-    height: 350px;
+    height: 320px;
   }
-  .swiper-slide {
-    justify-content: center;
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 36px;
+    height: 36px;
+  }
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 18px;
+  }
+}
+@media (max-width: 480px) {
+  .hero {
+    min-height: 70vh;
+  }
+  .brand-name {
+    font-size: 1.8rem;
+  }
+  .tagline {
+    font-size: 1rem;
+  }
+  .sub-tagline {
+    font-size: 0.8rem;
+  }
+  .btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.8rem;
+  }
+  .section {
+    padding: 2.5rem 1rem;
+  }
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .model-card,
+  .review-card {
+    width: 220px;
+  }
+  .model-img {
+    height: 300px;
   }
 }
