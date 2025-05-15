@@ -55,9 +55,9 @@ const productSwiper = new Swiper('.swiper-container:not(.reviews-swiper)', {
   slidesPerView: 1,
   spaceBetween: 20,
   loop: true,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
   pagination: {
     el: '.swiper-pagination',
@@ -73,9 +73,9 @@ const reviewsSwiper = new Swiper('.reviews-swiper', {
   slidesPerView: 1,
   spaceBetween: 20,
   loop: true,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
   pagination: {
     el: '.swiper-pagination',
