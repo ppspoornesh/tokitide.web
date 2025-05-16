@@ -20,7 +20,7 @@ window.addEventListener('load', () => {
   setTimeout(() => {
     clearInterval(captionInterval);
     preloader.classList.add('hidden');
-    setTimeout(() => preloader.remove(), 600); // Remove preloader after fade
+    setTimeout(() => preloader.remove(), 600);
   }, 3000);
 });
 
@@ -53,10 +53,28 @@ const appearOnScroll = new IntersectionObserver((entries, observer) => {
 }, appearOptions);
 faders.forEach(el => appearOnScroll.observe(el));
 
-// Order-Fab Button Visibility
-const orderFab = document.querySelector('.order-fab');
+// Order-Fab Button Visibility and Modal Handler
+const orderFab = document.getElementById('order-fab');
+const orderModal = document.getElementById('order-modal');
+const modalClose = document.getElementById('modal-close');
+
 window.addEventListener('scroll', () => {
   orderFab.classList.toggle('visible', window.scrollY > 300);
+});
+
+orderFab.addEventListener('click', (e) => {
+  e.preventDefault();
+  orderModal.classList.add('active');
+});
+
+modalClose.addEventListener('click', () => {
+  orderModal.classList.remove('active');
+});
+
+orderModal.addEventListener('click', (e) => {
+  if (e.target === orderModal) {
+    orderModal.classList.remove('active');
+  }
 });
 
 // Like Button
