@@ -41,8 +41,9 @@ document.querySelectorAll('.nav-links a').forEach(link => {
   });
 });
 
-// Fade-In Scroll
+// Fade-In and Pop-In Scroll
 const faders = document.querySelectorAll('.fade-in');
+const popIns = document.querySelectorAll('.pop-in');
 const appearOptions = { threshold: 0.15 };
 const appearOnScroll = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
@@ -51,16 +52,30 @@ const appearOnScroll = new IntersectionObserver((entries, observer) => {
     observer.unobserve(entry.target);
   });
 }, appearOptions);
-faders.forEach(el => appearOnScroll.observe(el));
 
-// Order-Fab Button Visibility and Modal Handler
+faders.forEach(el => appearOnScroll.observe(el));
+popIns.forEach(el => appearOnScroll.observe(el));
+
+// Parallax Effect for Hero Section
+window.addEventListener('scroll', () => {
+  const hero = document.querySelector('.hero');
+  const scrollPosition = window.scrollY;
+  hero.style.backgroundPositionY = `${scrollPosition * 0.3}px`;
+});
+
+// Order-Fab and Back-to-Top Button Visibility
 const orderFab = document.getElementById('order-fab');
-const orderModal = document.getElementById('order-modal');
-const modalClose = document.getElementById('modal-close');
+const backToTop = document.getElementById('back-to-top');
 
 window.addEventListener('scroll', () => {
-  orderFab.classList.toggle('visible', window.scrollY > 300);
+  const isVisible = window.scrollY > 300;
+  orderFab.classList.toggle('visible', isVisible);
+  backToTop.classList.toggle('visible', isVisible);
 });
+
+// Order Modal Handler
+const orderModal = document.getElementById('order-modal');
+const modalClose = document.getElementById('modal-close');
 
 orderFab.addEventListener('click', (e) => {
   e.preventDefault();
