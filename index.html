@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Transform your photos into stunning Ghibli, Pixar, Anime styles on premium tees and phone cases.">
+  <title>Toki Tide – Premium AI Streetwear & Phone Cases</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+  <link rel="preload" href="images/logo.webp" as="image">
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="preloader">
+    <img src="images/logo.webp" alt="Toki Tide Logo" class="preloader-logo">
+    <div class="preloader-caption">Crafting Your Vibe...</div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <img src="images/logo.webp" alt="Toki Tide Logo" class="nav-logo">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#models" class="nav-link">T-Shirts</a></li>
+        <li><a href="#phone-cases" class="nav-link">Phone Cases</a></li>
+        <li><a href="#order" class="nav-link">Order</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+        <li><a href="#reviews" class="nav-link">Reviews</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger" role="button" aria-label="Toggle menu" aria-expanded="false">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content fade-in">
+      <h1 class="brand-name">Toki Tide</h1>
+      <p class="tagline">Your vibe, reimagined in iconic styles.</p>
+      <p class="sub-tagline">Custom AI-powered streetwear & phone cases.</p>
+      <a href="#models" class="btn primary">Discover Now</a>
+    </div>
+  </header>
+
+  <!-- Info Section -->
+  <section class="section info fade-in">
+    <div class="section-divider"></div>
+    <h2 class="section-title">Crafted for You</h2>
+    <p class="info-text">
+      <strong>Toki Tide</strong> uses AI to turn your photos into designs in styles like <strong>Ghibli</strong>, <strong>Pixar</strong>, <strong>Anime</strong>, and more—printed on premium tees and phone cases.
+    </p>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="section how-it-works fade-in">
+    <div class="section-divider"></div>
+    <h2 class="section-title">Your Design, Your Way</h2>
+    <div class="steps-container">
+      <div class="step-card pop-in" data-stagger="1">
+        <div class="step-icon">📸</div>
+        <h3 class="step-title">Upload</h3>
+        <p class="step-desc">Share your favorite high-quality photo.</p>
+      </div>
+      <div class="step-card pop-in" data-stagger="2">
+        <div class="step-icon">🎨</div>
+        <h3 class="step-title">Choose Style</h3>
+        <p class="step-desc">Pick from Anime, Pixar, Ghibli, or other styles.</p>
+      </div>
+      <div class="step-card pop-in" data-stagger="3">
+        <div class="step-icon">📱/👕</div>
+        <h3 class="step-title">Select Product</h3>
+        <p class="step-desc">Choose premium tees or phone cases.</p>
+      </div>
+      <div class="step-card pop-in" data-stagger="4">
+        <div class="step-icon">🚚</div>
+        <h3 class="step-title">Delivered</h3>
+        <p class="step-desc">Get your custom creation at your doorstep.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Model Showcase Section -->
+  <section id="models" class="section slider-section fade-in">
+    <div class="section-divider"></div>
+    <h2 class="section-title">T-Shirt Collection</h2>
+    <div class="swiper-container product-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/demo1.webp" srcset="images/demo1-small.webp 480w, images/demo1.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Pixar Style T-Shirt" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Pixar Style</p>
+              <button class="like-btn" aria-label="Like Pixar Style T-Shirt">❤</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/demo2.webp" srcset="images/demo2-small.webp 480w, images/demo2.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Anime Style T-Shirt" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Anime Style</p>
+              <button class="like-btn" aria-label="Like Anime Style T-Shirt">❤</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/demo3.webp" srcset="images/demo3-small.webp 480w, images/demo3.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Ghibli Style T-Shirt" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Ghibli Style</p>
+              <button class="like-btn" aria-label="Like Ghibli Style T-Shirt">❤</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/demo4.webp" srcset="images/demo4-small.webp 480w, images/demo4.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Anime Style T-Shirt" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Anime Style</p>
+              <button class="like-btn" aria-label="Like Anime Style T-Shirt">❤</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/demo5.webp" srcset="images/demo5-small.webp 480w, images/demo5.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Anime Style T-Shirt" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Anime Style</p>
+              <button class="like-btn" aria-label="Like Anime Style T-Shirt">❤</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/demo6.webp" srcset="images/demo6-small.webp 480w, images/demo6.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Anime Style T-Shirt" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Anime Style</p>
+              <button class="like-btn" aria-label="Like Anime Style T-Shirt">❤</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/demo7.webp" srcset="images/demo7-small.webp 480w, images/demo7.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Anime Style T-Shirt" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Anime Style</p>
+              <button class="like-btn" aria-label="Like Anime Style T-Shirt">❤</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/demo8.webp" srcset="images/demo8-small.webp 480w, images/demo8.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Anime Style T-Shirt" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Anime Style</p>
+              <button class="like-btn" aria-label="Like Anime Style T-Shirt">❤</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/demo9.webp" srcset="images/demo9-small.webp 480w, images/demo9.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Anime Style T-Shirt" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Anime Style</p>
+              <button class="like-btn" aria-label="Like Anime Style T-Shirt">❤</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/demo10.webp" srcset="images/demo10-small.webp 480w, images/demo10.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Anime Style T-Shirt" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Anime Style</p>
+              <button class="like-btn" aria-label="Like Anime Style T-Shirt">❤</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/demo11.webp" srcset="images/demo11-small.webp 480w, images/demo11.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Anime Style T-Shirt" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Anime Style</p>
+              <button class="like-btn" aria-label="Like Anime Style T-Shirt">❤</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/demo12.webp" srcset="images/demo12-small.webp 480w, images/demo12.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Anime Style T-Shirt" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Anime Style</p>
+              <button class="like-btn" aria-label="Like Anime Style T-Shirt">❤</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/demo13.webp" srcset="images/demo13-small.webp 480w, images/demo13.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Anime Style T-Shirt" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Anime Style</p>
+              <button class="like-btn" aria-label="Like Anime Style T-Shirt">❤</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/demo14.webp" srcset="images/demo14-small.webp 480w, images/demo14.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Anime Style T-Shirt" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Anime Style</p>
+              <button class="like-btn" aria-label="Like Anime Style T-Shirt">❤</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/demo15.webp" srcset="images/demo15-small.webp 480w, images/demo15.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Anime Style T-Shirt" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Anime Style</p>
+              <button class="like-btn" aria-label="Like Anime Style T-Shirt">❤</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!-- Phone Cases Section -->
+  <section id="phone-cases" class="section slider-section fade-in">
+    <div class="section-divider"></div>
+    <h2 class="section-title">Phone Case Collection</h2>
+    <div class="swiper-container product-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/case1.webp" srcset="images/case1-small.webp 480w, images/case1.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Ghibli Style Phone Case" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Ghibli Style</p>
+              <button class="like-btn" aria-label="Like Ghibli Phone Case">❤</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/case2.webp" srcset="images/case2-small.webp 480w, images/case2.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Pixar Style Phone Case" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Pixar Style</p>
+              <button class="like-btn" aria-label="Like Pixar Phone Case">❤</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/case3.webp" srcset="images/case3-small.webp 480w, images/case3.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Anime Style Phone Case" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Anime Style</p>
+              <button class="like-btn" aria-label="Like Anime Phone Case">❤</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/case4.webp" srcset="images/case4-small.webp 480w, images/case4.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Watercolor Style Phone Case" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Watercolor Style</p>
+              <button class="like-btn" aria-label="Like Watercolor Phone Case">❤</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/case5.webp" srcset="images/case5-small.webp 480w, images/case5.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Spider-Verse Style Phone Case" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Spider-Verse Style</p>
+              <button class="like-btn" aria-label="Like Spider-Verse Phone Case">❤</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/case6.webp" srcset="images/case6-small.webp 480w, images/case6.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Spider-Verse Style Phone Case" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Spider-Verse Style</p>
+              <button class="like-btn" aria-label="Like Spider-Verse Phone Case">❤</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/case7.webp" srcset="images/case7-small.webp 480w, images/case7.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Spider-Verse Style Phone Case" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Spider-Verse Style</p>
+              <button class="like-btn" aria-label="Like Spider-Verse Phone Case">❤</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/case8.webp" srcset="images/case8-small.webp 480w, images/case8.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Spider-Verse Style Phone Case" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Spider-Verse Style</p>
+              <button class="like-btn" aria-label="Like Spider-Verse Phone Case">❤</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/case9.webp" srcset="images/case9-small.webp 480w, images/case9.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Spider-Verse Style Phone Case" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Spider-Verse Style</p>
+              <button class="like-btn" aria-label="Like Spider-Verse Phone Case">❤</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/case10.webp" srcset="images/case10-small.webp 480w, images/case10.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Spider-Verse Style Phone Case" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Spider-Verse Style</p>
+              <button class="like-btn" aria-label="Like Spider-Verse Phone Case">❤</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/case11.webp" srcset="images/case11-small.webp 480w, images/case11.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Spider-Verse Style Phone Case" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Spider-Verse Style</p>
+              <button class="like-btn" aria-label="Like Spider-Verse Phone Case">❤</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/case12.webp" srcset="images/case12-small.webp 480w, images/case12.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Spider-Verse Style Phone Case" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Spider-Verse Style</p>
+              <button class="like-btn" aria-label="Like Spider-Verse Phone Case">❤</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/case13.webp" srcset="images/case13-small.webp 480w, images/case13.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Spider-Verse Style Phone Case" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Spider-Verse Style</p>
+              <button class="like-btn" aria-label="Like Spider-Verse Phone Case">❤</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/case14.webp" srcset="images/case14-small.webp 480w, images/case14.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Spider-Verse Style Phone Case" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Spider-Verse Style</p>
+              <button class="like-btn" aria-label="Like Spider-Verse Phone Case">❤</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/case15.webp" srcset="images/case15-small.webp 480w, images/case15.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Spider-Verse Style Phone Case" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Spider-Verse Style</p>
+              <button class="like-btn" aria-label="Like Spider-Verse Phone Case">❤</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/case16.webp" srcset="images/case16-small.webp 480w, images/case16.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Spider-Verse Style Phone Case" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Spider-Verse Style</p>
+              <button class="like-btn" aria-label="Like Spider-Verse Phone Case">❤</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/case17.webp" srcset="images/case17-small.webp 480w, images/case17.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Spider-Verse Style Phone Case" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Spider-Verse Style</p>
+              <button class="like-btn" aria-label="Like Spider-Verse Phone Case">❤</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/case18.webp" srcset="images/case18-small.webp 480w, images/case18.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Spider-Verse Style Phone Case" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Spider-Verse Style</p>
+              <button class="like-btn" aria-label="Like Spider-Verse Phone Case">❤</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/case19.webp" srcset="images/case19-small.webp 480w, images/case19.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Spider-Verse Style Phone Case" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Spider-Verse Style</p>
+              <button class="like-btn" aria-label="Like Spider-Verse Phone Case">❤</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="model-card pop-in">
+            <img src="images/case20.webp" srcset="images/case20-small.webp 480w, images/case20.webp 800w" sizes="(max-width: 480px) 480px, 800px" alt="Spider-Verse Style Phone Case" class="model-img" loading="lazy">
+            <div class="model-info">
+              <p>Spider-Verse Style</p>
+              <button class="like-btn" aria-label="Like Spider-Verse Phone Case">❤</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!-- Order Section -->
+  <section id="order" class="section dark fade-in">
+    <div class="section-divider"></div>
+    <h2 class="section-title">Own Your Style</h2>
+    <p class="order-text">
+      Create a unique piece with your photo in a custom design.<br><br>
+      • 🔗 Ideal for trendsetters.<br>
+      • 🧵 Premium cotton tees or durable phone cases.<br>
+      • 🚀 Fast delivery to your door.
+    </p>
+    <a href="https://forms.gle/8PS362xLbGS5XDcm6" class="btn secondary" target="_blank" data-order-btn>Order Now</a>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="section fade-in">
+    <div class="section-divider"></div>
+    <h2 class="section-title">Common Queries</h2>
+    <div class="faq-container">
+      <details class="faq-item">
+        <summary class="faq-question">How do I upload my photo?</summary>
+        <p class="faq-answer">Click "Order Now" to access a form where you can upload a clear, high-resolution photo.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">What styles can I choose from?</summary>
+        <p class="faq-answer">Choose from Ghibli, Pixar, Anime, Spider-Verse, Watercolor, and more during the order process.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">What is the delivery time?</summary>
+        <p class="faq-answer">Delivery usually takes 7-14 business days.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">Are phone cases available for all models?</summary>
+        <p class="faq-answer">We support most popular phone models. Specify your model in the order form.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">What will be the price of products?</summary>
+        <p class="faq-answer">The price varies depending on the product and customization options. We'll provide the exact price after you submit your order details.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section id="reviews" class="section slider-section fade-in">
+    <div class="section-divider"></div>
+    <h2 class="section-title">Customer Reviews</h2>
+    <div class="rating-summary">
+      <p><strong>4.8/5</strong> based on 200 reviews</p>
+      <div class="stars">★★★★★</div>
+    </div>
+    <div class="swiper-container reviews-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">“The Anime-style T-shirt is stunning! The quality is top-notch.”</p>
+            <p class="review-author">– Priya S., Mumbai</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="review-card">
+            <div class="review-stars">★★★★☆</div>
+            <p class="review-text">“Loved my Ghibli phone case! Worth the wait.”</p>
+            <p class="review-author">– Arjun K., Delhi</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">“The Pixar design on my tee is vibrant!”</p>
+            <p class="review-author">– Sneha R., Bangalore</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">“Super easy process and fast shipping.”</p>
+            <p class="review-author">– Rohan M., Hyderabad</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScZUrtG6DR_O4lxds3cc_S-KFhhQ_h3M0LsY-9LE8v40FQSKw/viewform?usp=header" class="btn secondary" target="_blank">Submit Your Review</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section fade-in">
+    <div class="section-divider"></div>
+    <h2 class="section-title">About Toki Tide</h2>
+    <p class="about-text">
+      Toki Tide blends technology and self-expression, crafting wearable art with AI that reflects your unique story.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 <strong>Toki Tide</strong> — by <strong>Poornesh Gorrela</strong>, NIT Srinagar</p>
+    <p>Contact: <a href="mailto:poorneshpavansai992@gmail.com">poorneshpavansai992@gmail.com</a></p>
+    <p>Follow 
+      <a href="https://instagram.com/toki.tide" target="_blank">
+        <img src="images/instagram-icon.webp" alt="Instagram icon" style="height:20px;vertical-align:middle;">
+        @toki.tide
+      </a>
+    </p>
+  </footer>
+
+  <!-- Floating Button -->
+  <a href="https://forms.gle/8PS362xLbGS5XDcm6" class="order-fab" target="_blank" aria-label="Order now" data-order-btn>🛒</a>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script defer src="script.js"></script>
+</body>
+</html>
