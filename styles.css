@@ -11,7 +11,7 @@ html, body {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
   color: #1a1a1a;
   background: #f8f9fa;
   line-height: 1.6;
@@ -350,6 +350,51 @@ a {
   flex-wrap: wrap;
 }
 
+/* Price Modal */
+.price-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.price-modal.active {
+  display: flex;
+}
+
+.price-modal-content {
+  background: #2c2c2c;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  text-align: left;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.price-modal-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.price-modal-content pre {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
 /* Sections */
 .section {
   padding: 3.5rem 1.5rem;
@@ -428,9 +473,10 @@ a {
 .swiper-container {
   max-width: 1300px;
   margin: auto;
-  padding: 1.5rem 0.5rem;
+  padding: 1.5rem 0.5rem 4rem;
   overflow: hidden;
   touch-action: pan-y;
+  position: relative;
 }
 
 .swiper-slide {
@@ -509,7 +555,7 @@ a {
 }
 
 .swiper-pagination {
-  margin-top: 1.5rem;
+  margin-top: 3.5rem;
 }
 
 .swiper-pagination-bullet {
@@ -517,12 +563,65 @@ a {
   height: 8px;
   background: #ccc;
   opacity: 0.6;
-  transition: background 0.3s ease;
+  margin: 0 6px;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .swiper-pagination-bullet-active {
   background: #1a1a1a;
   opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Swiper Navigation Buttons (YouTube-Inspired) */
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+  width: 48px;
+  height: 48px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.4rem;
+  transition: opacity 0.3s ease, background 0.3s ease, transform 0.2s ease;
+  opacity: 0;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-container:hover .swiper-button-prev,
+.swiper-container:hover .swiper-button-next {
+  opacity: 1;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: rgba(0, 0, 0, 0.9);
+  transform: scale(1.05);
+}
+
+.swiper-button-prev {
+  left: 15px;
+}
+
+.swiper-button-next {
+  right: 15px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+@media (min-width: 1024px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 /* Order Section */
@@ -530,6 +629,77 @@ a {
   font-size: 1.05rem;
   max-width: 750px;
   margin: 0 auto 2rem;
+}
+
+/* Price Predictor Section */
+.price-predictor {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.price-predictor-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.price-predictor-form {
+  display: grid;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.price-predictor-form label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: left;
+}
+
+.price-predictor-form select,
+.price-predictor-form input {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #555;
+  background: #333;
+  color: #fff;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.price-predictor-form input[type="file"] {
+  padding: 0.5rem;
+  background: #333;
+  border: 1px solid #555;
+  color: #fff;
+}
+
+.price-predictor-form select:focus,
+.price-predictor-form input:focus {
+  outline: none;
+  border-color: #fff;
+}
+
+.price-predictor-form select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.price-disclaimer {
+  font-size: 0.85rem;
+  color: #ccc;
+  margin-top: 1rem;
+  font-style: italic;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* FAQ Section */
@@ -719,11 +889,11 @@ a {
     height: 403px;
   }
   .swiper-container {
-    padding: 1.5rem 0.75rem;
+    padding: 1.5rem 0.75rem 3.5rem;
   }
   .swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
   }
 }
 
@@ -779,5 +949,28 @@ a {
   }
   .order-modal-content p {
     font-size: 0.9rem;
+  }
+  .swiper-container {
+    padding: 1.5rem 0.75rem 3rem;
+  }
+  .price-predictor {
+    padding: 1.5rem;
+  }
+  .price-predictor-title {
+    font-size: 1.3rem;
+  }
+  .price-predictor-form select,
+  .price-predictor-form input {
+    padding: 0.65rem;
+    font-size: 0.9rem;
+  }
+  .price-modal-content {
+    padding: 1.5rem;
+  }
+  .price-modal-content h3 {
+    font-size: 1.3rem;
+  }
+  .price-modal-content pre {
+    font-size: 0.85rem;
   }
 }
