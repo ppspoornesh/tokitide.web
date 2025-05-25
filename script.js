@@ -197,9 +197,7 @@ const styles = {
     'Graffiti',
     'Retro-comic',
     'Comic-strip',
-    'Manga',
-    'Pixar Couple Edition',
-    'Ghibli Back Printed'
+    'Manga'
   ],
   phonecase: [
     'Cartoon Couple Edition',
@@ -236,10 +234,8 @@ const basePriceRanges = {
     'Anime': { min: 340, max: 360 },
     'Manga': { min: 340, max: 360 },
     'Ghibli': { min: 360, max: 380 },
-    'Ghibli Back Printed': { min: 360, max: 380 },
     'Soft Ghibli': { min: 360, max: 380 },
     'Pixar': { min: 360, max: 380 },
-    'Pixar Couple Edition': { min: 360, max: 380 },
     'Retro-comic': { min: 360, max: 380 },
     'Comic-strip': { min: 360, max: 380 },
     'Kalamkari-Madhubani Art': { min: 380, max: 400 },
@@ -264,9 +260,7 @@ const basePriceRanges = {
     'Manga': { min: 170, max: 180 },
     'Ghibli': { min: 170, max: 180 },
     'Soft Ghibli': { min: 170, max: 180 },
-    'Ghibli Couple Edition': { min: 170, max: 180 },
     'Pixar': { min: 170, max: 180 },
-    'Pixar Couple Edition': { min: 170, max: 180 },
     'Retro-comic': { min: 180, max: 190 },
     'Comic-strip': { min: 180, max: 190 },
     'Kalamkari-Madhubani Art': { min: 180, max: 190 },
