@@ -200,8 +200,6 @@ const styles = {
     'Manga'
   ],
   phonecase: [
-    'Cartoon Couple Edition',
-    'Ghibli Couple Edition',
     'Minimalistic Black Line',
     'Kalamkari-Madhubani Art',
     'Mithila-Madhubani Art',
